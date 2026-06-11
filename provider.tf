@@ -1,0 +1,17 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "6.46.0"
+    }
+  }
+}
+
+provider "aws" {
+  default_tags {
+    tags = {
+      Environment = "Test"
+      Createdby = "terraform Tag"
+    }
+  }
+}
